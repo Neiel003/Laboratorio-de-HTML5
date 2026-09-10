@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name = "Description" content = "Este es un ejemplo de tablas en html"/>
+        <meta name = "Keywords" content = "HTML, CSS, your, keywords"/> 
+        
+        <meta name="Distribution" content="Global"/>
+        <meta name="Author" content="Vasti Neiel neiel31200@gmail.com"/>
+        <meta name="Robots" content="index, follow"/>
+
+        <link rel="stylesheet" href="img/b_2i10.ico">
+
+        <title>Ejemplo de Tabla</title>
+       <style>
+        /* Estilo y formato del fondo, tipografía, color, justificación, etc. */
+        body {
+            font-family: Georgia;
+            background-color: #b5be9d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #d3c3b3;
+            padding-top: 120px; 
+            padding-bottom: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Barra superior */
+        .barra-superior {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: fixed; /* Se queda fija arriba */
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* Bloque izquierdo: Flecha y Nombre */
+        .bloque-izquierda {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Flecha para regresar  */
+        .btn-flecha-regresar {
+            font-size: 1.8rem;
+            color: #355c7d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-flecha-regresar:hover {
+            color: #6c76cc;
+            transform: translateX(-4px);
+        }
+
+        .nombre-marca {
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #080808;
+            letter-spacing: 3px;
+            line-height: 1;
+        }
+
+        .nombre-marca span {
+            display: block;
+            font-size: 0.6rem;
+            color: #7f8c8d;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sticker de gatito con animación */
+        .michi-sticker {
+            font-size: 1.4rem;
+            cursor: default;
+            user-select: none;
+            animation: flotarMichi 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes flotarMichi {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        /* Formato del título principal */
+        h1 {
+            color: #0c0c0c;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        /* Formato del recuadro blanco aplicado a la tabla para que coincida con tu diseño anterior */
+        table {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+        }
+
+        caption {
+            font-family: Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #0c0c0c;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            text-align: center;
+        }
+
+        /* Encabezados principales de columnas */
+        tr:first-child th {
+            color: #355c7d;
+            font-weight: bold;
+            border-bottom: 2px solid #a4bcdc;
+        }
+
+        /* Separadores de ciudades */
+        th[id="buenos-aires"], th[id="cordoba"] {
+            color: #897446;
+            font-size: 1.1rem;
+            text-align: left;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Estilo para las celdas de fechas y totales */
+        th[header] {
+            font-weight: 500;
+            color: #2d3748;
+            text-align: left;
+        }
+
+        /* Efecto sutil al pasar el mouse por las filas de datos */
+        tr:hover td, tr:hover th[header] {
+            background-color: #f8fafc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="barra-superior">
+        <div class="bloque-izquierda">
+            <a href="./" class="btn-flecha-regresar" title="Regresar a la carpeta anterior">←</a>
+            
+            <div class="nombre-marca">
+                VASTI LEGASPI
+                <span>DESARROLLO WEB</span>
+            </div>
+        </div>
+
+        <div class="menu-navegacion">
+            <span class="michi-sticker">🐾 🐱</span>
+        </div>
+    </div> 
+
+        <table> <!-- indica que se realizara una tabla -->
+            <caption>Informe de gastos de viaje</caption> <!-- título que indica el propósito de la tabla -->
+            <tr> <!-- Inicia la primera fila -->
+                <th>>&gt;</th> <!-- Encabezado de la columna de acciones -->
+                <th>Comida</th>
+                <th>Hotel</th>
+                <th>Transporte</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <th id="buenos-aires" axis = "buenos-aires">Buenos Aires</th> <!-- Encabezado de la ciudad -->
+            </tr>
+            <tr>
+                <th header="buenos-aires">25-Agosto-97</th> <!-- Encabezado de fila con la fecha ; hereda la relación de la ciudad mediante el atributo header -->
+                <td>37.34</td>
+                <td>112.00</td>
+                <td>45.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th header="buenos-aires">26-Agosto-97</th> <!-- Encabezado de fila con la fecha ; hereda la relación de la ciudad mediante el atributo header -->
+                <td>27.28</td>
+                <td>112.00</td>
+                <td>45.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th header="buenos-aires">Subtotal</th>  <!-- Encabezado que indica que esta fila agrupa la sumatoria de la sección actual -->
+                <td>65.00</td>
+                <td>224.00</td>
+                <td>90.00</td>
+                <td>379.02</td>
+            </tr>
+            <tr>
+                <th id="cordoba" axis = "cordoba">Córdoba</th> <!-- Encabezado de la ciudad -->
+            </tr>
+            <tr>
+                <th header="cordoba">27-Agosto-97</th> <!-- Encabezado de la fecha que se encuentra a la izquierda d ela tabla, por eso se usa th -->
+                <td>96.00</td>
+                <td>109.00</td>
+                <td>36.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th header="cordoba">28-Agosto-97</th> <!-- Encabezado de la fecha que se encuentra a la izquierda d ela tabla, por eso se usa th -->
+                <td>35.00</td>
+                <td>109.00</td>
+                <td>36.00</td>
+                <td></td>   
+            </tr>
+            <tr>
+                <th header="cordoba">Subtotal</th>  <!-- Encabezado que indica que esta fila agrupa la sumatoria de la sección actual -->
+                <td>196.27</td>
+                <td>442.00</td>
+                <td>162.00</td>
+                <td>800.27</td>
+            </tr>
+        </table>
+    </body>
+</html>

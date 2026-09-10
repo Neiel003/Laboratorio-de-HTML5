@@ -1,0 +1,135 @@
+/* Agregados los estilos de fondo y estructura de la página sin tocar tus fuentes */
+body {
+    background-color: #c4e4eb; /* Color de fondo bonis extraído */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 120px; 
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+/* Agregados los estilos de la barra superior */
+.barra-superior {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.bloque-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-flecha-regresar {
+    font-size: 1.8rem;
+    color: #355c7d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-flecha-regresar:hover {
+    color: #6c76cc;
+    transform: translateX(-4px);
+}
+
+.nombre-marca {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #080808;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.nombre-marca span {
+    display: block;
+    font-size: 0.6rem;
+    color: #7f8c8d;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.michi-sticker {
+    font-size: 1.4rem;
+    cursor: default;
+    user-select: none;
+    animation: flotarMichi 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes flotarMichi {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.tabla {
+    font-family: Arial, sans-serif; /*Tipografía que estaremos usando*/
+    font-size: 14px; /*Tamaño general de la letra*/
+    text-align: right; /*Alineación del texto*/
+    width: 600px; /*Ancho fijo asignado a la tabla*/
+}
+
+.tabla th {
+    /*background-color: #f2f2f2;*/
+    padding: 5px;  /*Interlineadp*/
+    font-size: 16px; /*Tamaño de la fuente en los encabezados*/
+    background-color: #f2f2f2; /*Color de fondo de los encabezados*/
+    color: black; /*Color de los encabezados*/
+    border-right-width: 1px; /*Grosor del borde*/
+    border-right-style: solid; /*Tipo de línea continua en el borde*/
+    border-right-color: #558FA6; /*Tono del borde*/
+    border-bottom-width: 1px; /**Grosor del borde inferior*/
+    border-bottom-style: solid; /*Tipo de línea continua en el borde inferior*/
+    FONT-FAMILY: "Trebuchet MS", Arial; /*Tipografía de los encabezados*/
+    text-transform: uppercase; /* Convertir a mayúsculas */
+}
+
+.tabla .modo1 td {
+    padding: 5px;  /*Interlineadp*/
+    border-right-width: 1px; /*Grosor del borde*/
+    border-right-style: solid; /*Tipo de línea continua en el borde*/
+    border-bottom-width: 1px; /**Grosor del borde inferior*/
+    border-bottom-style: solid; /*Tipo de línea continua en el borde inferior*/
+    border-right-color: #A4C4D0; /*Tono del borde*/
+    border-bottom-color: #A4C4D0; /*Tono del borde inferior*/
+    font-family: "Trebuchet MS", Arial;
+    text-align: left;
+}
+
+.tabla .modo2 {
+    padding: 5px; /*Interlineadp*/
+    border-right-width: 1px; /*Grosor del borde*/
+    border-bottom-width: 1px; /**Grosor del borde inferior*/
+    border-right-style: solid; /*Tipo de línea continua en el borde*/
+    border-bottom-style: solid; /*Tipo de línea continua en el borde inferior*/
+    border-right-color: #EBE9BC;
+    border-bottom-color: #EBE9BC;
+}
+
+.tabla .modo2 td {
+    /*font-size: 12px; /*Tamaño de la fuente en las celdas*/
+    font-weight: bold; /*Estilo de la fuente en las celdas*/
+    background-color: #fdfdf1;
+    color: #990000;
+    border-bottom-style: solid;
+    border-right-color: #EBE9BC;
+    font-family: "Trebuchet MS", Arial;
+    text-align: left;
+}
