@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!--Codificación de caracteres-->
+    <title>Demostración de Selectores</title>
+    <link rel="stylesheet" href="Selectores.css"> <!--Vinculación de la hoja de estilos-->
+</head>
+<body style="padding: 30px; font-family: Arial, sans-serif; background-color: #f7fafc;">
+
+    <!-- Demostración del Selector ID -->
+    <h2 id="offers">Sección de Ofertas Disponibles</h2> <!--Usa el ID #offers-->
+
+    <!-- Demostración de Selector por Tipo y Selector de Hijo Directo -->
+    <p>
+        Este es un párrafo normal donde este <strong>texto es un hijo directo</strong> por lo que tiene fondo amarillo y letra roja.
+    </p>
+
+    <!-- Demostración de Selector Descendiente (No es hijo directo) -->
+    <p>
+        En este párrafo el texto está dentro de un elemento intermedio: <span><em><strong>aquí no es hijo directo</strong></em></span>, por eso solo cambia a color rojo y no tiene fondo amarillo.
+    </p>
+
+    <!-- Demostración de selectores en listas -->
+    <ul>
+        <li>Elemento de lista común</li>
+        <li class="attention">Elemento con clase attention (se ve amarillo y negrita)</li> <!--Usa li.attention-->
+    </ul>
+
+    <!-- Demostración de la clase general independiente -->
+    <div class="attention" style="margin-top: 15px; padding: 10px;">
+        Este es un recuadro cualquiera con la clase (.attention) aplicada de forma libre.
+    </div>
+
+</body>
+</html>

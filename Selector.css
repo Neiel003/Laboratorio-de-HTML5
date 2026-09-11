@@ -1,0 +1,36 @@
+
+/*Slecctor Universal*/
+*{
+    background-color: #ffc;
+}
+
+.attention{ /*Selector de clase, busca cualquier elemnto que tenga la clase*/
+    background-color: #ffc;
+}
+
+/*Selector por  Tipo*/
+p{
+    background-color: #ffc; /*Aplica un fondo amarrillo a todos los elemntos*/
+}
+
+/*Slector Class*/
+li.attention{  /*Aplica un ofondo amarillo pálido a todoslos elemntos li marcados con clase attention*/
+    background-color: #ffc;
+    font-weight: bold;
+}
+
+/*Selector ID*/
+h2#offers{
+    border-bottom: 2px solid orange;
+    color: #333;
+}
+
+/*Selectores Descendientes*/
+p strong{ /*Afecta a cualquier strong que esté dentro de un <p> incluso si esta metido dentro de un <spam> intemedio*/
+    color: #d9534f;
+}
+
+/*Selector de Hijo*/
+p>strong{ /*Solo pinta el fondo si el <strong> está direcyamnete dentro del <p>. Si hay un <smpam>*/
+    background-color: #ffc;
+}
