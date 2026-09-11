@@ -51,6 +51,86 @@
             padding: 0.2em 0.4em;
             border-radius: 4px;
         }
+
+                /* Barra superior */
+        .barra-superior {
+            width: 100%; /*Ocupa todo el ancho*/
+            background-color: #ffffff; /*Color de fondo blanco*/
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /*Sombra ligera*/
+            display: flex; /*Alineación horizontal de bloques*/
+            justify-content: space-between; /*Separa los bloques a los extremos*/
+            align-items: center; /*Centrado vertical*/
+            padding: 15px 40px; /*Espaciado interno*/
+            position: fixed; /*Se queda fija arriba*/
+            top: 0; /*Pegada al borde superior*/
+            left: 0; /*Pegada al borde izquierdo*/
+            box-sizing: border-box; /*Incluye el padding en el tamaño total*/
+            z-index: 1000; /*Prioridad de superposición*/
+        }
+
+        /* Bloque izquierdo: Flecha y Nombre */
+        .bloque-izquierda {
+            display: flex; /*Alineación horizontal interna*/
+            align-items: center; /*Centrado vertical de los elementos*/
+            gap: 20px; /*Separación entre la flecha y el texto*/
+        }
+
+        /* Flecha para regresar  */
+        .btn-flecha-regresar {
+            font-size: 1.8rem; /*Tamaño de la flecha*/
+            color: #355c7d; /*Color azul inicial*/
+            text-decoration: none; /*Quita el subrayado*/
+            font-weight: bold; /*Grosor de la fuente*/
+            transition: transform 0.2s ease, color 0.2s ease; /*Animación suave de cambio*/
+            cursor: pointer; /*Cambia el cursor a mano*/
+        }
+
+        /* Efecto de la flecha al pasar el mouse */
+        .btn-flecha-regresar:hover {
+            color: #6c76cc; /*Cambia de color*/
+            transform: translateX(-4px); /*Se mueve levemente a la izquierda*/
+        }
+
+        /* Contenedor del nombre principal */
+        .nombre-marca {
+            font-family: Georgia, serif; /*Tipo de letra elegante*/
+            font-size: 1.5rem; /*Tamaño del nombre*/
+            font-weight: bold; /*Texto en negrita*/
+            color: #080808; /*Color oscuro*/
+            letter-spacing: 3px; /*Espaciado entre letras*/
+            line-height: 1; /*Altura de línea ajustada*/
+        }
+
+        /* Subtítulo debajo de tu nombre */
+        .nombre-marca span {
+            display: block; /*Hace que salte de línea*/
+            font-size: 0.6rem; /*Tamaño de letra pequeño*/
+            color: #7f8c8d; /*Color gris*/
+            letter-spacing: 2px; /*Espaciado de letras*/
+            margin-top: 5px; /*Separación superior*/
+            font-family: Arial, sans-serif; /*Tipo de letra secundaria*/
+        }
+
+        /* Contenedor del menú derecho */
+        .menu-navegacion {
+            display: flex; /*Layout horizontal*/
+        }
+
+        /* Sticker de gatito con animación */
+        .michi-sticker {
+            font-size: 1.4rem; /*Tamaño de los emojis*/
+            cursor: default; /*Mantiene el cursor normal*/
+            user-select: none; /*Evita que se seleccione el texto*/
+            animation: flotarMichi 3s ease-in-out infinite; /*Llama a la animación infinitamente*/
+            display: inline-block; /*Permite aplicar la transformación de movimiento*/
+        }
+
+        /* Regla de animación para el efecto flotante del gato */
+        @keyframes flotarMichi {
+            0%, 100% { transform: translateY(0); } /*Posición inicial y final*/
+            50% { transform: translateY(-4px); } /*Punto medio: sube 4 píxeles*/
+        }
+
         </style>
     </head>
     <body>
